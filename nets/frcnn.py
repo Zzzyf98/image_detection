@@ -12,8 +12,8 @@ class FasterRCNN(nn.Module):
                 loc_normalize_mean = (0., 0., 0., 0.),
                 loc_normalize_std = (0.1, 0.1, 0.2, 0.2),
                 feat_stride = 16,
-                anchor_scales = [8, 16, 32],
-                ratios = [0.5, 1, 2],
+                anchor_scales = [16, 32, 64],
+                ratios = [0.67, 1, 1.33],
                 backbone = 'vgg'
     ):
         super(FasterRCNN, self).__init__()
