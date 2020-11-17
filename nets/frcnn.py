@@ -14,7 +14,7 @@ class FasterRCNN(nn.Module):
                 feat_stride = 16,
                 anchor_scales = [16, 32, 64],
                 ratios = [0.67, 1, 1.33],
-                backbone = 'vgg'
+                backbone = 'resnet50'
     ):
         super(FasterRCNN, self).__init__()
     
