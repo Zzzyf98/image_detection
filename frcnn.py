@@ -12,6 +12,7 @@ from nets.frcnn_training import get_new_img_size
 from PIL import Image, ImageFont, ImageDraw
 import copy
 import math
+from sobel import sobel_function
 
 class FRCNN(object):
     _defaults = {
@@ -77,6 +78,7 @@ class FRCNN(object):
     #   检测图片
     #---------------------------------------------------#
     def detect_image(self, image):
+        image = sobel_function(image)
         start_time = time.time()
         image_shape = np.array(np.shape(image)[0:2])
         old_width = image_shape[1]
