@@ -1,4 +1,5 @@
 import torch
+from sobel import function
 import torch.nn as nn
 from nets.vgg16 import decom_vgg16
 from nets.resnet50 import resnet50
